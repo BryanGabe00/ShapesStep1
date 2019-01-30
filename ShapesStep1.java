@@ -7,8 +7,6 @@ public class ShapesStep1
     Rectangle r = new Rectangle();
 
     System.out.println("Shapes");
-    r.setWidth(5);
-    r.setHeight(7);
 
     double area = r.calcArea();
 

@@ -3,6 +3,19 @@ public abstract class Shape
 {
   private int positionX, positionY, height, width;
 
+//default constructor
+  public Shape() { this(1, 1, 0, 0); }
+
+  public Shape(int width, int height, int positionX, int positionY)
+  {
+    setWidth(width);
+    setHeight(height);
+    setPositionX(positionX);
+    setpositionY(positionY);
+  }
+
+  public Shape(int width, int height) { this(width, height, 0, 0); }
+
   public abstract double calcArea();
 
 // getters
@@ -24,12 +37,12 @@ public abstract class Shape
   }
   public final void setWidth(int width)
   {
-    if(width < 0) throw new IllegalArgumentException("Width can't be negitive");
+    if(width <= 0) throw new IllegalArgumentException("Width can't be negitive");
     this.width = width;
   }
   public final void setHeight(int height)
   {
-    if(height < 0) throw new IllegalArgumentException("Height can't be negitive");
+    if(height <= 0) throw new IllegalArgumentException("Height can't be negitive");
     this.height = height;
   }
 }
